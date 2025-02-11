@@ -227,6 +227,16 @@ section.section:nth-of-type(even) {
     border-color: #0B263B !important;
 }
 
+.btn-cv {
+    background-color: #fff !important;
+    border-color: #fff !important;
+    color: #1A4371 !important;
+}
+
+.btn-cv:hover {
+    opacity: 0.8;
+}
+
 
 .project-image-container {
     text-align: center;
