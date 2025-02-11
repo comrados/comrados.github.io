@@ -126,28 +126,25 @@
                 <div class="project-details" data-project="1">
                     <h4><strong>Local Concept Embeddings</strong></h4>
                     <p>
-                        <strong>LoCEs</strong> (Local Concept Embeddings) analyze how <strong>DNNs represent concepts
-                            (e.g., objects) in
-                            complex scenes</strong> in their latent feature spaces. Unlike traditional global
-                        methods, <strong>LoCEs</strong> generate separate embeddings for each individual sample.
+                        <strong>LoCEs (Local Concept Embeddings)</strong> analyze how <strong>DNNs represent visual concepts</strong> (e.g., object) within complex scenes by generating 
+                        <strong>sample-specific embeddings</strong>. Unlike traditional methods, LoCEs capture both the <strong>foreground concept</strong> and its 
+                        <strong>context</strong> (background) within a single representation.
+                    </p>                    
+                    <p>
+                        As <strong>concept-vs-context embeddings</strong>, LoCEs provide insights into not only the concept itself but also the environments 
+                        in which it appears. Analyzing these embeddings reveals <strong>concept distributions, relationships, and variations</strong>, 
+                        offering a deeper understanding of how neural networks perceive objects in <strong>complex scenes</strong>.
                     </p>
-                    <ul>
-                        <li><strong>Sub-concepts</strong> – Variations within a concept, such as <strong>near
-                                car</strong> vs. <strong>distant car</strong>.</li>
-                        <li><strong>Concept Overlap</strong> – Cases where different concepts have similar
-                            representations, like <strong>bus</strong> and <strong>truck</strong>.</li>
-                        <li><strong>Concept-vs-Context Encoding</strong> – Representation of a concept in contrast to
-                            its background, e.g., <strong>cat on a sofa with a dog nearby</strong>.</li>
-                    </ul>
 
                     <p>For example, <strong>LoCEs</strong> can be used for:</p>
                     <ul>
                         <li><strong>Concept Understanding</strong> – Analysis of how a model distinguishes between
                             different objects and their contexts in complex scenes.</li>
-                        <li><strong>Sub-Concept Discovery</strong> – Identification of finer details within a concept.
+                        <li><strong>Sub-Concept Discovery</strong> – Identification of finer details within a concept, such as <strong>near
+                            car</strong> vs. <strong>distant car</strong>.
                         </li>
                         <li><strong>Concept Confusion Detection</strong> – Identification of cases where a model
-                            struggles to differentiate between similar objects.</li>
+                            struggles to differentiate between similar objects, like <strong>bus</strong> and <strong>truck</strong>.</li>
                         <li><strong>Outlier Detection</strong> – Detection of unusual or mislabeled data points.</li>
                         <li><strong>Information Retrieval</strong> – Retrieval of images based on concept similarity in
                             feature space.</li>
