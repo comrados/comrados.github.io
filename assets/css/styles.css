@@ -85,7 +85,6 @@ h6 {
     border-radius: 10px !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     margin: 0.4rem 0 !important;
-    cursor: pointer;
     padding: 0.2rem 0.2rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
