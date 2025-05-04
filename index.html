@@ -129,40 +129,33 @@
                 <div class="project-details" data-project="1">
                     <h4><strong>Local Concept Embeddings</strong></h4>
                     <p>
-                        <strong>LoCEs (Local Concept Embeddings)</strong> analyze how <strong>DNNs represent visual
-                            concepts</strong> (e.g., object) within complex scenes by generating
-                        <strong>sample-specific embeddings</strong>. Unlike traditional methods, LoCEs capture both the
-                        <strong>foreground concept</strong> and its
-                        <strong>context</strong> (background) within a single representation.
+                        <strong>LoCEs (Local Concept Embeddings)</strong> provide a way to analyze how <strong>DNNs
+                            represent object concepts</strong> in complex, real-world scenes. Unlike traditional global
+                        approaches, LoCEs generate <strong>sample-specific embeddings</strong> that capture both the
+                        target object and its surrounding <strong>context</strong> within a single, compact
+                        representation.
                     </p>
                     <p>
-                        As <strong>concept-vs-context embeddings</strong>, LoCEs provide insights into not only the
-                        concept itself but also the environments
-                        in which it appears. Analyzing these embeddings reveals <strong>concept distributions,
-                            relationships, and variations</strong>,
-                        offering a deeper understanding of how neural networks perceive objects in <strong>complex
-                            scenes</strong>.
+                        This <strong>context-aware analysis</strong> helps uncover how models encode, separate, and
+                        confuse visual concepts across diverse scenarios. LoCEs reveal meaningful patterns in feature
+                        space, supporting model inspection, debugging, and evaluation.
                     </p>
 
-                    <p>For example, <strong>LoCEs</strong> can be used for:</p>
+                    <p><strong>Use cases include:</strong></p>
                     <ul>
-                        <li><strong>Concept Understanding</strong> – Analysis of how a model distinguishes between
-                            different objects and their contexts in complex scenes.</li>
-                        <li><strong>Sub-Concept Discovery</strong> – Identification of finer details within a concept,
-                            such as <strong>near
-                                car</strong> vs. <strong>distant car</strong>.
+                        <li><strong>Concept Understanding</strong> – Examine how models distinguish objects and their
+                            contexts.</li>
+                        <li><strong>Sub-Concept Discovery</strong> – Identify unlabeled variations within categories
+                            (e.g., <strong>near</strong> vs. <strong>distant car</strong>).</li>
+                        <li><strong>Concept Confusion Detection</strong> – Detect overlaps in representations of similar
+                            categories (e.g., <strong>bus</strong> vs. <strong>truck</strong>).</li>
+                        <li><strong>Outlier Detection</strong> – Find unusual or challenging examples in the data.</li>
+                        <li><strong>Information Retrieval</strong> – Search for samples using LoCE-based similarity.
                         </li>
-                        <li><strong>Concept Confusion Detection</strong> – Identification of cases where a model
-                            struggles to differentiate between similar objects, like <strong>bus</strong> and
-                            <strong>truck</strong>.
-                        </li>
-                        <li><strong>Outlier Detection</strong> – Detection of unusual or mislabeled data points.</li>
-                        <li><strong>Information Retrieval</strong> – Retrieval of images based on concept similarity in
-                            feature space.</li>
-                        <li><strong>Comparison of Feature Spaces in Networks</strong> – Evaluating how different DNN
-                            architectures or training methods affect concept representation, enabling insights into
-                            generalization, robustness, and feature alignment across models.</li>
+                        <li><strong>Model Comparison</strong> – Compare internal feature spaces across architectures or
+                            training methods.</li>
                     </ul>
+
                     <div class="project-image-container text-center">
                         <figure>
                             <img src="assets/images/loce_example.png" alt="LoCEs Example"
@@ -176,9 +169,10 @@
                         <img src="assets/images/loce_separation.png" alt="LoCEs Concept Separation"
                             class="img-fluid rounded shadow project-image-preview"
                             onclick="openModal('assets/images/loce_separation.png')">
-                        <figcaption class="mt-2 text-muted">Concept confusion in different models identified with LoCEs.
+                        <figcaption class="mt-2 text-muted">Concept confusion across models revealed by LoCEs.
                         </figcaption>
                     </div>
+
                     <div class="text-center mt-3">
                         <a href="https://github.com/continental/local-concept-embeddings" target="_blank"
                             class="btn btn-github btn-lg">
@@ -186,161 +180,162 @@
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <!-- Project 2 -->
-                <div class="project-details" data-project="2">
-                    <h4><strong>Concept-Based Adversarial Attack Analysis</strong></h4>
-                    <p>
-                        <strong>Concept-Based Adversarial Analysis</strong> investigates how <strong>adversarial attacks
-                            manipulate DNNs</strong>
-                        at the <strong>concept level</strong>. This study reveals how
-                        adversarial attacks <strong>distort, introduce, or remove concepts</strong> (i.e., latent
-                        features) in a
-                        model’s feature space.
-                    </p>
 
-                    <p>
-                        Through <strong>concept discovery</strong> techniques, adversarial perturbations are decomposed
-                        into components,
-                        and their effects are analyzed across multiple DNN architectures and attack types.
-                        It is revealed that adversarial attacks systematically distort concept representations, with
-                        adversarial perturbations being <strong>linearly decomposable
-                            into a small set of shared latent vectors</strong>. Analysis
-                        demonstrates that <strong>attack components exploit target-specific directions</strong>.
-                    </p>
+            <!-- Project 2 -->
+            <div class="project-details" data-project="2">
+                <h4><strong>Concept-Based Adversarial Attack Analysis</strong></h4>
+                <p>
+                    <strong>Concept-Based Adversarial Analysis</strong> investigates how <strong>adversarial attacks
+                        manipulate DNNs</strong>
+                    at the <strong>concept level</strong>. This study reveals how
+                    adversarial attacks <strong>distort, introduce, or remove concepts</strong> (i.e., latent
+                    features) in a
+                    model’s feature space.
+                </p>
 
-                    <div class="project-image-container text-center">
-                        <figure>
-                            <img src="assets/images/aa_concept_change.png"
-                                alt="Concept changes under adversarial attacks"
-                                class="img-fluid rounded shadow project-image-preview"
-                                onclick="openModal('assets/images/aa_concept_change.png')">
-                            <figcaption class="mt-2 text-muted">Concept distortions under adversarial attacks.
-                            </figcaption>
-                        </figure>
-                    </div>
+                <p>
+                    Through <strong>concept discovery</strong> techniques, adversarial perturbations are decomposed
+                    into components,
+                    and their effects are analyzed across multiple DNN architectures and attack types.
+                    It is revealed that adversarial attacks systematically distort concept representations, with
+                    adversarial perturbations being <strong>linearly decomposable
+                        into a small set of shared latent vectors</strong>. Analysis
+                    demonstrates that <strong>attack components exploit target-specific directions</strong>.
+                </p>
 
-                    <div class="project-image-container text-center">
-                        <img src="assets/images/aa_directions.png"
-                            alt="Similarity of directions of concepts discovered in adversarial attacks targeting 'taxi' class."
+                <div class="project-image-container text-center">
+                    <figure>
+                        <img src="assets/images/aa_concept_change.png" alt="Concept changes under adversarial attacks"
                             class="img-fluid rounded shadow project-image-preview"
-                            onclick="openModal('assets/images/aa_directions.png')">
-                        <figcaption class="mt-2 text-muted">Similarity of directions of concepts discovered in
-                            adversarial attacks targeting 'taxi' class.
+                            onclick="openModal('assets/images/aa_concept_change.png')">
+                        <figcaption class="mt-2 text-muted">Concept distortions under adversarial attacks.
                         </figcaption>
-                    </div>
-                    <div class="text-center mt-3">
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-63787-2_6" target="_blank"
-                            class="btn btn-pdf btn-lg">
-                            <i class="fas fa-file-pdf me-2"></i> Read paper
-                        </a>
-                    </div>
+                    </figure>
                 </div>
 
-
-
-
-                <!-- Project 3 -->
-                <div class="project-details" data-project="3">
-                    <h4><strong>Deep Unsupervised Contrastive Hashing</strong></h4>
-                    <p>
-                        <strong>DUCH</strong> (Deep Unsupervised Contrastive Hashing) is an <strong>unsupervised
-                            cross-modal retrieval method</strong> designed for efficient search and retrieval of
-                        <strong>semantically related images and text</strong> in large-scale datasets.
-                        Unlike traditional supervised retrieval methods that rely on extensive labeled data,
-                        <strong>DUCH</strong> learns <strong>discriminative feature representations</strong> in an
-                        unsupervised manner, making it scalable and adaptable for various multi-modal applications.
-                    </p>
-
-                    <h5>Key Features:</h5>
-                    <ul>
-                        <li><strong>Cross-Modal Hashing:</strong> Generates <strong>compact binary hash codes</strong>
-                            for <strong>fast and memory-efficient</strong> retrieval across different modalities (e.g.,
-                            image-to-text, text-to-image).</li>
-                        <li><strong>Unsupervised Contrastive Learning:</strong> Leverages <strong>contrastive
-                                objectives</strong> to preserve semantic relationships, enabling effective retrieval
-                            without labeled training data.</li>
-                        <li><strong>Adversarial Learning:</strong> Enforces alignment between <strong>image and text
-                                representations</strong> using an adversarial loss function, improving retrieval
-                            consistency.</li>
-                        <li><strong>Multi-Objective Optimization:</strong> Combines multiple loss functions to enhance
-                            retrieval performance.
-                        </li>
-                    </ul>
-
-                    <h5>Applications:</h5>
-                    <ul>
-                        <li><strong>Multi-Modal Search:</strong> Enables <strong>image-to-text and text-to-image
-                                retrieval</strong> in diverse domains, including visual recognition, media analysis, and
-                            scientific research.</li>
-                        <li><strong>Scalable Indexing:</strong> Compact hash codes enable <strong>efficient large-scale
-                                data retrieval</strong> with minimal storage and computational cost.</li>
-                        <li><strong>Semantic Representation Learning:</strong> Captures complex relationships between
-                            different modalities, aiding in knowledge discovery and AI-driven content understanding.
-                        </li>
-                    </ul>
-
-
-                    <div class="project-image-container text-center">
-                        <img src="assets/images/duch_example.png" alt="DUCH Architecture"
-                            class="img-fluid rounded shadow project-image-preview"
-                            onclick="openModal('assets/images/duch_example.png')">
-                        <figcaption class="mt-2 text-muted">DUCH Architecture.</figcaption>
-                    </div>
-
-                    <div class="text-center mt-3">
-                        <a href="https://git.tu-berlin.de/rsim/duch" target="_blank" class="btn btn-github btn-lg">
-                            <i class="fab fa-gitlab me-2"></i> View on GitLab
-                        </a>
-                    </div>
+                <div class="project-image-container text-center">
+                    <img src="assets/images/aa_directions.png"
+                        alt="Similarity of directions of concepts discovered in adversarial attacks targeting 'taxi' class."
+                        class="img-fluid rounded shadow project-image-preview"
+                        onclick="openModal('assets/images/aa_directions.png')">
+                    <figcaption class="mt-2 text-muted">Similarity of directions of concepts discovered in
+                        adversarial attacks targeting 'taxi' class.
+                    </figcaption>
                 </div>
-
-                <!-- Project 4 -->
-                <div class="project-details" data-project="4">
-                    <h4><strong>Cross-Modal Hashing with Noise Robustness</strong></h4>
-                    <p>
-                        <strong>CHNR</strong> (Cross-Modal Hashing with Noise Robustness) is an
-                        <strong>unsupervised</strong> technique designed for
-                        <strong>retrieving images based on textual descriptions</strong>, even in the presence of noisy
-                        image-text correspondences.
-                        It extends <a href="#" class="duch-link"><strong>DUCH (Deep Unsupervised Contrastive
-                                Hashing)</strong></a> by introducing a <strong>noise detection module</strong> that
-                        mitigates errors in training data.
-                    </p>
-
-                    <ul>
-                        <li><strong>Unsupervised Learning</strong> – Learns robust cross-modal representations without
-                            labeled data, making it adaptable to large-scale datasets.</li>
-                        <li><strong>Robust Feature Extraction</strong> – Extracts deep representations of both images
-                            and texts, ensuring effective cross-modal learning.</li>
-                        <li><strong>Noise Detection Module</strong> – Identifies and reduces the impact of incorrectly
-                            paired image-text data.</li>
-                        <li><strong>Efficient Hashing Mechanism</strong> – Generates binary hash codes for scalable
-                            retrieval with minimal storage requirements.</li>
-                    </ul>
-
-
-                    <div class="project-image-container text-center">
-                        <img src="assets/images/chnr_example.png" alt="CHNR Architecture"
-                            class="img-fluid rounded shadow project-image-preview"
-                            onclick="openModal('assets/images/chnr_example.png')">
-                        <figcaption class="mt-2 text-muted">CHNR Architecture.</figcaption>
-                    </div>
-
-                    <div class="text-center mt-3">
-                        <a href="https://git.tu-berlin.de/rsim/chnr" target="_blank" class="btn btn-github btn-lg">
-                            <i class="fab fa-gitlab me-2"></i> View on GitLab
-                        </a>
-                    </div>
+                <div class="text-center mt-3">
+                    <a href="https://link.springer.com/chapter/10.1007/978-3-031-63787-2_6" target="_blank"
+                        class="btn btn-pdf btn-lg">
+                        <i class="fas fa-file-pdf me-2"></i> Read paper
+                    </a>
                 </div>
-
             </div>
 
-            <!-- Full-Screen Image Modal -->
-            <div id="imageModal" class="modal" onclick="closeModal()">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="fullImage">
+
+
+
+            <!-- Project 3 -->
+            <div class="project-details" data-project="3">
+                <h4><strong>Deep Unsupervised Contrastive Hashing</strong></h4>
+                <p>
+                    <strong>DUCH</strong> (Deep Unsupervised Contrastive Hashing) is an <strong>unsupervised
+                        cross-modal retrieval method</strong> designed for efficient search and retrieval of
+                    <strong>semantically related images and text</strong> in large-scale datasets.
+                    Unlike traditional supervised retrieval methods that rely on extensive labeled data,
+                    <strong>DUCH</strong> learns <strong>discriminative feature representations</strong> in an
+                    unsupervised manner, making it scalable and adaptable for various multi-modal applications.
+                </p>
+
+                <h5>Key Features:</h5>
+                <ul>
+                    <li><strong>Cross-Modal Hashing:</strong> Generates <strong>compact binary hash codes</strong>
+                        for <strong>fast and memory-efficient</strong> retrieval across different modalities (e.g.,
+                        image-to-text, text-to-image).</li>
+                    <li><strong>Unsupervised Contrastive Learning:</strong> Leverages <strong>contrastive
+                            objectives</strong> to preserve semantic relationships, enabling effective retrieval
+                        without labeled training data.</li>
+                    <li><strong>Adversarial Learning:</strong> Enforces alignment between <strong>image and text
+                            representations</strong> using an adversarial loss function, improving retrieval
+                        consistency.</li>
+                    <li><strong>Multi-Objective Optimization:</strong> Combines multiple loss functions to enhance
+                        retrieval performance.
+                    </li>
+                </ul>
+
+                <h5>Applications:</h5>
+                <ul>
+                    <li><strong>Multi-Modal Search:</strong> Enables <strong>image-to-text and text-to-image
+                            retrieval</strong> in diverse domains, including visual recognition, media analysis, and
+                        scientific research.</li>
+                    <li><strong>Scalable Indexing:</strong> Compact hash codes enable <strong>efficient large-scale
+                            data retrieval</strong> with minimal storage and computational cost.</li>
+                    <li><strong>Semantic Representation Learning:</strong> Captures complex relationships between
+                        different modalities, aiding in knowledge discovery and AI-driven content understanding.
+                    </li>
+                </ul>
+
+
+                <div class="project-image-container text-center">
+                    <img src="assets/images/duch_example.png" alt="DUCH Architecture"
+                        class="img-fluid rounded shadow project-image-preview"
+                        onclick="openModal('assets/images/duch_example.png')">
+                    <figcaption class="mt-2 text-muted">DUCH Architecture.</figcaption>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="https://git.tu-berlin.de/rsim/duch" target="_blank" class="btn btn-github btn-lg">
+                        <i class="fab fa-gitlab me-2"></i> View on GitLab
+                    </a>
+                </div>
             </div>
+
+            <!-- Project 4 -->
+            <div class="project-details" data-project="4">
+                <h4><strong>Cross-Modal Hashing with Noise Robustness</strong></h4>
+                <p>
+                    <strong>CHNR</strong> (Cross-Modal Hashing with Noise Robustness) is an
+                    <strong>unsupervised</strong> technique designed for
+                    <strong>retrieving images based on textual descriptions</strong>, even in the presence of noisy
+                    image-text correspondences.
+                    It extends <a href="#" class="duch-link"><strong>DUCH (Deep Unsupervised Contrastive
+                            Hashing)</strong></a> by introducing a <strong>noise detection module</strong> that
+                    mitigates errors in training data.
+                </p>
+
+                <ul>
+                    <li><strong>Unsupervised Learning</strong> – Learns robust cross-modal representations without
+                        labeled data, making it adaptable to large-scale datasets.</li>
+                    <li><strong>Robust Feature Extraction</strong> – Extracts deep representations of both images
+                        and texts, ensuring effective cross-modal learning.</li>
+                    <li><strong>Noise Detection Module</strong> – Identifies and reduces the impact of incorrectly
+                        paired image-text data.</li>
+                    <li><strong>Efficient Hashing Mechanism</strong> – Generates binary hash codes for scalable
+                        retrieval with minimal storage requirements.</li>
+                </ul>
+
+
+                <div class="project-image-container text-center">
+                    <img src="assets/images/chnr_example.png" alt="CHNR Architecture"
+                        class="img-fluid rounded shadow project-image-preview"
+                        onclick="openModal('assets/images/chnr_example.png')">
+                    <figcaption class="mt-2 text-muted">CHNR Architecture.</figcaption>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="https://git.tu-berlin.de/rsim/chnr" target="_blank" class="btn btn-github btn-lg">
+                        <i class="fab fa-gitlab me-2"></i> View on GitLab
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Full-Screen Image Modal -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="fullImage">
+        </div>
         </div>
     </section>
 
@@ -356,15 +351,16 @@
 
             <div class="card publication-card mb-3">
                 <div class="card-body">
-                    <h5 class="card-title"><strong>On Background Bias of Post-Hoc Concept Embeddings in Computer Vision DNNs</strong></h5>
+                    <h5 class="card-title"><strong>On Background Bias of Post-Hoc Concept Embeddings in Computer Vision
+                            DNNs</strong></h5>
                     <p class="card-text">Explainable Artificial Intelligence, xAI 2025.</p>
-                    <p class="card-text-small">Gesina Schwalbe, <strong>Georgii Mikriukov</strong>, Stavros Gerolymatos, Edgar Heinert, Annika Mütze, Mert Keser, Alois Knoll, Matthias Rottmann.</p>
+                    <p class="card-text-small">Gesina Schwalbe, <strong>Georgii Mikriukov</strong>, Stavros Gerolymatos,
+                        Edgar Heinert, Annika Mütze, Mert Keser, Alois Knoll, Matthias Rottmann.</p>
                     <div class="d-flex d-flex gap-2 mt-3">
                         <a href="https://arxiv.org/pdf/2504.08602" target="_blank" class="btn btn-pdf">
                             <i class="fas fa-file-pdf me-2"></i> PDF
                         </a>
-                        <a href="https://github.com/gesina/bg_randomized_loce" target="_blank"
-                            class="btn btn-github">
+                        <a href="https://github.com/gesina/bg_randomized_loce" target="_blank" class="btn btn-github">
                             <i class="fab fa-github me-2"></i> GitHub
                         </a>
                     </div>
